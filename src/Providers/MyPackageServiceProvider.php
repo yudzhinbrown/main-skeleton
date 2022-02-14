@@ -1,6 +1,6 @@
 <?php
 
-namespace :uc:vendor\:uc:package;
+namespace :uc:vendor\:uc:package\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
