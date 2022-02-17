@@ -31,12 +31,12 @@ class :uc:packageServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../Config/:lc:package.php', ':lc:package');
+        $this->mergeConfigFrom(__DIR__.'/../Config/:lc:package.php', ':lc:vendor:::lc:package');
 
         // Register the service the package provides.
-        $this->app->singleton(':lc:package', function ($app) {
-            return new :uc:package;
-        });
+//         $this->app->singleton(':lc:package', function ($app) {
+//             return new :uc:package;
+//         });
     }
 
     /**
@@ -59,7 +59,7 @@ class :uc:packageServiceProvider extends ServiceProvider
         // Publishing the configuration file.
         $this->publishes([
             __DIR__.'/../Configs/:lc:package.php' => config_path(':lc:package.php'),
-        ], ':lc:package.config');
+        ], ':lc:vendor:::lc:package.config');
 
         // Publishing the views.
         /*$this->publishes([
